@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>生成你的专属民大形象</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.1/cropper.css" rel="stylesheet">
+<!--    <link rel="stylesheet" href="css/index.css">-->
+    <link rel="stylesheet" href="css/index.min.css">
+
+</head>
+<body>
+<canvas id="toolCanvas" width="600" height="600" style="display: none;">抱歉，您的浏览器版本过低，请更新</canvas>
+<div class="root">
+    <!-- Logo -->
+    <img class="logo" src="assets/logo.png" alt="Logo">
+    <!-- 头像区域 -->
+    <div class="avatar_box">
+        <!-- <div class="line"></div> -->
+<!--        <img id="avatar" src="assets/avatar.e38953b5.svg" alt="头像框图">-->
+        <img class="avatar" id="bgImg" src="assets/avatar.svg" alt="">
+        <img class="avatar" id="fnImg" src="" alt="">
+    </div>
+    <!-- 按钮区域 -->
+    <div class="btn_box">
+        <div>
+            <label class="btn btn_upload" for="file">上传你的头像</label>
+            <input type="file" id="file" onchange="changepic(this)" style="display: none;" accept="image/*">
+        </div>
+        <div id="saveBtn" class="btn btn_create">点我生成你的专属头像</div>
+        <!-- 提示文字 -->
+        <div class="tip">上传你的头像之后，选择下方的头像框，点击生成按钮，制作你的民大专属头像，然后长按图片保存</div>
+        <div class="line"></div>
+    </div>
+    <!-- 头像框选区 -->
+    <div class="avatar_border_box">
+        <img src="assets/1.png" alt="框1">
+        <img src="assets/2.png" alt="框1">
+        <img src="assets/3.png" alt="框1">
+        <img src="assets/4.png" alt="框1">
+        <img src="assets/5.png" alt="框1">
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <img class="mxiaowei" src="assets/mxiaowei.png" alt="民小薇&ZEUS">
+        <div class="zeus">
+            <!-- <span class="line"></span> -->
+            <a href="http://www.itzishu.cn/">由我校创业团队紫薯科技工作室提供技术支持</a>
+            <!-- <span class="line"></span> -->
+        </div>
+    </div>
+</div>
+<div id="clip_box">
+    <img id="tempImg" style="display: none;" src="" >
+    <button type="button" onclick="handleClip(this)" id="clip_btn">裁剪</button>
+</div>
+<!--用来保存下载的链接-->
+<a id="download" href=""></a>
+<!--加载中-->
+<img id="loading" src="assets/loading.svg" alt="">
+<!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script> -->
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.1/cropper.min.js"></script>-->
+<!--<script src="./js/index.js"></script>-->
+ <script src="js/app.min.js"></script>
+</body>
+</html>

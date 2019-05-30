@@ -1,37 +1,32 @@
-# smu68
+# 西南民族大学68周年校庆H5
 
-#### 介绍
-西南民族大学68周年校庆H5——生成你的专属民大头像
+## 开始使用
+### 1.安装依赖
+```bash
+cnpm i 
+```
+### 2.运行
+> 注意，如果你没有全局安装gulp请先安装，安装命令 `cnpm i gulp -g`
 
-#### 软件架构
-软件架构说明
+在全局安装了gulp之后，使用：
+```bash
+gulp
+```
+即可，然后访问 localhost:8081端口
 
+### 3.部署
+进行了第二步之后，会在项目根目录下面生成dist目录，该目录下面则是可直接部署的项目文件，也是访问localhost:8081的项目文件
 
-#### 安装教程
+## 源码说明
+本项目使用的第三方库：
 
-1. xxxx
-2. xxxx
-3. xxxx
+zepto.js  v1.2.0
 
-#### 使用说明
+cropper.js  v1.5.0
 
-1. xxxx
-2. xxxx
-3. xxxx
+前端技术栈：
 
-#### 参与贡献
+canvas、less、gulp构建工具
 
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## 源码修改
+建议在src/less/index.less修改样式代码，主要的页面操作在src/js/index.js文件，页面为index.html，不建议修改其他文件内容
