@@ -43,7 +43,7 @@ gulp.task('html', function(){
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('server',function(){
+gulp.task('server',['html','minifyCss', 'uglify'],function(){
     connect.server({
         root:'dist',//服务器的根目录
         port: 8081, //服务器的地址，没有此配置项默认也是 8080
