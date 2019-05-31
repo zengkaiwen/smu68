@@ -52,6 +52,7 @@ function clipImg(imgData){
             ready: function (e) {
                 // $('#clip_btn').show();  // 显示裁剪按钮
                 $('#loading').toggle();
+                $('#clip_tips').toggle();
                 _fnElem.src = _avatarFn;
             }
         });
@@ -62,12 +63,11 @@ function clipImg(imgData){
 function handleClip(e){
     console.dir(e);
     console.log('点击裁剪');
-    e.innerText = "裁剪中...";
     _avatarBg = _cropper.getCroppedCanvas().toDataURL();  // 获取截取的图片内容
     _bgElem.src = _avatarBg;
     _bgElem.onload = function(){
-        e.innerText = '裁剪';
         _cropper.destroy();
+        $('#clip_tips').toggle();
     };
     $('#saveBtn').text("点我生成你的专属头像");
 }
@@ -115,11 +115,4 @@ function composeImage(){
         }
     };
 
-}
-
-// 微信相关，清缓存
-if ( !window.name ){
-    var str = Math.random().toString(36).substr(2);
-    window.location.href += '?v='+str;
-    window.name = 'isreload';
 }

@@ -161,6 +161,16 @@ button {
   background-color: #d9070a;
   color: white;
 }
+#clip_box #clip_tips {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  color: white;
+  left: 0;
+  width: 100%;
+  font-size: 0.8rem;
+  display: none;
+}
 #loading {
   position: fixed;
   top: 0;
